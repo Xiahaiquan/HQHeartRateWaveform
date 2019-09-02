@@ -12,6 +12,7 @@
 		2D8FFD8F231CF50D001CBB11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8FFD8D231CF50D001CBB11 /* Main.storyboard */; };
 		2D8FFD91231CF521001CBB11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D8FFD90231CF521001CBB11 /* Assets.xcassets */; };
 		2D8FFD94231CF521001CBB11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8FFD92231CF521001CBB11 /* LaunchScreen.storyboard */; };
+		2D8FFD9E231CF940001CBB11 /* HeartLiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FFD9D231CF940001CBB11 /* HeartLiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2D8FFD90231CF521001CBB11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D8FFD93231CF521001CBB11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D8FFD95231CF521001CBB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D8FFD9D231CF940001CBB11 /* HeartLiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartLiveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				2D8FFD89231CF50C001CBB11 /* AppDelegate.swift */,
 				2D8FFD8B231CF50C001CBB11 /* ViewController.swift */,
+				2D8FFD9D231CF940001CBB11 /* HeartLiveView.swift */,
 				2D8FFD8D231CF50D001CBB11 /* Main.storyboard */,
 				2D8FFD90231CF521001CBB11 /* Assets.xcassets */,
 				2D8FFD92231CF521001CBB11 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D8FFD8C231CF50C001CBB11 /* ViewController.swift in Sources */,
+				2D8FFD9E231CF940001CBB11 /* HeartLiveView.swift in Sources */,
 				2D8FFD8A231CF50C001CBB11 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,11 +289,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PPU93XBS4;
 				INFOPLIST_FILE = HQHeartRateWaveform/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fenda.www.HQHeartRateWaveform;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fenda.www.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,11 +308,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PPU93XBS4;
 				INFOPLIST_FILE = HQHeartRateWaveform/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fenda.www.HQHeartRateWaveform;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fenda.www.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
