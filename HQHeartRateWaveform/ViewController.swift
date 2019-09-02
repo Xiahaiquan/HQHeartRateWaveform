@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+//      初始化HeartLiveView
         let heartLiveView = HeartLiveView.init(frame: CGRect.init(x: 10, y: 100, width: self.view.frame.width - 20, height: 150))
         self.view.addSubview(heartLiveView)
 
