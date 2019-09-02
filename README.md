@@ -8,3 +8,5 @@
             print(heartRateMappValue)
             heartLiveView.drawRateWithPoint(NSNumber.init(value: heartRateMappValue))
         }
+        
+![image](https://github.com/Xiahaiquan/HQHeartRateWaveform/blob/master/Image.gif)
