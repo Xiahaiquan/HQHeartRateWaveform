@@ -11,7 +11,7 @@ import UIKit
 class HeartLiveView: UIView {
 
     var points = [NSNumber]()
-    let grid_w: CGFloat = 30.0
+    let gridWidth: CGFloat = 30.0
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,7 +27,6 @@ class HeartLiveView: UIView {
         self.buildGrid()
         self.drawRate()
     }
-
 
     public func drawRateWithPoint(_ point: NSNumber) {
         self.points .insert(point, at: 0)
@@ -45,11 +44,11 @@ class HeartLiveView: UIView {
 // MARK: - 内部方法
 extension HeartLiveView {
     private func drawRate() {
-        let ww = self.frame.size.width
-        let hh = self.frame.size.height
+        let width = self.frame.size.width
+        let height = self.frame.size.height
 
-        var pos_x = ww
-        var pos_y = hh / 2
+        var pointX = width
+        var pointY = height / 2
         // 获取当前画布
         let context = UIGraphicsGetCurrentContext()
         // 折线宽度
@@ -59,14 +58,14 @@ extension HeartLiveView {
         // 折线颜色
         context?.setStrokeColor(UIColor.red.cgColor)
         // 起点
-        context?.move(to: CGPoint.init(x: pos_x, y: pos_y))
+        context?.move(to: CGPoint.init(x: pointX, y: pointY))
 
         for point in points {
-            let h = CGFloat(point.floatValue)
-            pos_y = hh / 2 + (h * hh / 2)
+            let pointH = CGFloat(point.floatValue)
+            pointY = height / 2 + (pointH * height / 2)
             // 下一个点
-            context?.addLine(to: CGPoint.init(x: pos_x, y: pos_y))
-            pos_x -= 6
+            context?.addLine(to: CGPoint.init(x: pointX, y: pointY))
+            pointX -= 6
         }
         //开始划线
         context?.strokePath()
@@ -79,51 +78,50 @@ extension HeartLiveView {
 
         let context = UIGraphicsGetCurrentContext()
 
-        var pos_x: CGFloat = 0
-        var pos_y: CGFloat = 0
-
+        var pointX: CGFloat = 0
+        var pointY: CGFloat = 0
 
         // 在width范围内画竖线
-        while pos_x < width {
+        while pointX < width {
 
             context?.setLineWidth(0.2)
             context?.setStrokeColor(UIColor.green.cgColor)
-            context?.move(to: CGPoint.init(x: pos_x, y: 1))
-            context?.addLine(to: CGPoint.init(x: pos_x, y: height))
-            pos_x += grid_w
+            context?.move(to: CGPoint.init(x: pointX, y: 1))
+            context?.addLine(to: CGPoint.init(x: pointX, y: height))
+            pointX += gridWidth
             context?.strokePath()
         }
         // 在height范围内画横线
-        while pos_y < height {
+        while pointY < height {
 
             context?.setLineWidth(0.2)
             context?.setStrokeColor(UIColor.green.cgColor)
-            context?.move(to: CGPoint.init(x: 1, y: pos_y))
-            context?.addLine(to: CGPoint.init(x: width, y: pos_y))
-            pos_y += grid_w;
+            context?.move(to: CGPoint.init(x: 1, y: pointY))
+            context?.addLine(to: CGPoint.init(x: width, y: pointY))
+            pointY += gridWidth
             context?.strokePath()
         }
-        pos_x = 0
-        pos_y = 0
-
+        pointX = 0
+        pointY = 0
+        
         // 在width范围内画细的横线
-        while pos_x < width {
+        while pointX < width {
             context?.setLineWidth(0.1)
             context?.setStrokeColor(UIColor.green.cgColor)
-            context?.move(to: CGPoint.init(x: pos_x, y: 1))
-            context?.addLine(to: CGPoint.init(x: pos_x, y: height))
-            pos_x += grid_w / 5
+            context?.move(to: CGPoint.init(x: pointX, y: 1))
+            context?.addLine(to: CGPoint.init(x: pointX, y: height))
+            pointX += gridWidth / 5
             context?.strokePath()
         }
 
         // 在height范围内画细的竖线
-        while pos_y < height {
+        while pointY < height {
 
             context?.setLineWidth(0.1)
             context?.setStrokeColor(UIColor.green.cgColor)
-            context?.move(to: CGPoint.init(x: 1, y: pos_y))
-            context?.addLine(to: CGPoint.init(x: width, y: pos_y))
-            pos_y += grid_w / 5;
+            context?.move(to: CGPoint.init(x: 1, y: pointY))
+            context?.addLine(to: CGPoint.init(x: width, y: pointY))
+            pointY += gridWidth / 5
             context?.strokePath()
         }
     }
